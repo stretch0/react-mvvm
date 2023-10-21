@@ -1,6 +1,6 @@
 {
-  "name": "react-mvvm",
-  "version": "1.0.0",
+  "name": "mvvm-react",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
