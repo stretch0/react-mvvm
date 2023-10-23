@@ -1,11 +1,11 @@
 {
   "name": "mvvm-react",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "React MVVM scaffolding tool",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
-    "mvvm": "./dist/index.modern.js"
+    "mvvm": "./dist/index.js"
   },
   "scripts": {
     "build": "rollup -c",
@@ -22,6 +22,7 @@
     "@rollup/plugin-typescript": "^11.1.5",
     "@types/jest": "^29.5.6",
     "rollup": "^2.79.1",
+    "rollup-plugin-preserve-shebangs": "^0.2.0",
     "ts-node": "^10.9.1",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"

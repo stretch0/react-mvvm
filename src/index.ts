@@ -1,4 +1,6 @@
-import Case from 'case';
+#!/usr/bin/env node
+
+import * as Case from 'case';
 import { Command } from 'commander';
 import * as fs from 'node:fs/promises';
 import createIndex from './templates/createIndex';

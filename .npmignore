@@ -1,3 +1,6 @@
 test-project
 .github
-.github
+.git
+src
+rollup.config.js
+tsconfig.json
