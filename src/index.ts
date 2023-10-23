@@ -46,9 +46,13 @@ program.command('create')
   .option('-p, --path <char>', 'path character', './')
   .action(async (str, options) => {
     const componentName = Case.pascal(str);
+    
+    const filePath = `./${options.path}/${componentName}`
+
+    await fs.mkdir(filePath)
 
     await createIndexFile({ 
-      path: options.path ,
+      path: filePath,
       template: createIndex({ componentName })
     })
 
@@ -78,14 +82,14 @@ program.command('create')
     const promises = files.map(({ fileName, template }) => (
       createMVVMFile({
         componentName,
-        path: options.path,
+        path: filePath,
         fileName,
         template
       })
     ))
 
     await Promise.all(promises);
-    console.log(`${componentName} component created: ${options.path}/${componentName}`)
+    console.log(`${componentName} component created: ${filePath}`)
   });
 
 program.parse();
