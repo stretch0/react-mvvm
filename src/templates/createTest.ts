@@ -3,9 +3,7 @@ const createModel = ({
 }: {
   componentName: string;
 }) => {
-  return `import {
-  ${componentName}ViewModel
-} from './index';
+  return `import ${componentName}ViewModel from './index';
 
 describe('${componentName}', () => {
   it('Should render ${componentName}', () => {
